@@ -11,3 +11,6 @@ python -m venv venv
 pip install -r requirements
 python SearchBot\main.py
 ```
+
+### Usage:
+![image](https://user-images.githubusercontent.com/48328325/203541578-da619e49-90c4-49ab-bebd-7a5efe6b346d.png)
