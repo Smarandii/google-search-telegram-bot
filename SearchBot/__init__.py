@@ -1,4 +1,8 @@
 from telebot import TeleBot
+import os
+import setup
 
-bot = TeleBot(token="5038960617:AAHQw_9oXyv2HDquqb59IbMBbo13GJj2Ewc")
-SEARCH_API_KEY = "9c137aff6689199cfd9a001731fb1cab373688477dcd73803ea34ddeafb76da4"
+print(os.environ["BOT_API_KEY"])
+bot = TeleBot(token=os.environ["BOT_API_KEY"])
+SEARCH_API_KEY = os.environ["SEARCH_API_KEY"]
+TG_ADMIN_ID = os.environ["TG_ADMIN_ID"]

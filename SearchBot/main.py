@@ -1,5 +1,5 @@
 from serpapi import GoogleSearch
-from __init__ import bot, SEARCH_API_KEY
+from __init__ import bot, SEARCH_API_KEY, TG_ADMIN_ID
 
 
 def txt_to_bold(txt: str) -> str:
@@ -19,7 +19,7 @@ def prepare_txt_4_md(txt: str) -> str:
 
 def get_string_results(message):
     params = {
-        "engine": "duckduckgo",
+        "engine": "google",
         "q": message.text,
         "kl": "ru-ru",
         "api_key": SEARCH_API_KEY
@@ -57,4 +57,4 @@ while True:
     try:
         bot.polling(non_stop=True)
     except Exception as e:
-        bot.send_message(201973238, e.args)
+        bot.send_message(int(TG_ADMIN_ID), e.args)
